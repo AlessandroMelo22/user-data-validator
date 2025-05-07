@@ -10,7 +10,7 @@ Este projeto é uma aplicação simples em Java utilizando o **Spring Framework 
 ---
 ## 📌 Tecnologias Utilizadas
 
-- Java 17+
+- Java 21
 - Spring Framework (`spring-core`, `spring-beans`, `spring-context`, `spring-aop`, `spring-aspects`)
 - Maven
 - AspectJ
@@ -37,3 +37,28 @@ Este projeto é uma aplicação simples em Java utilizando o **Spring Framework 
     - service       -> UserService
       - validator -> Validadores individuais (nome, e-mail, senha)
     - aspect        -> Classe LogAspect com AOP
+
+
+---
+
+## 🧪 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/validador-usuario-spring.git
+
+2. Compile e execute pela sua IDE ou terminal com Maven:  
+   ```bash
+   mvn compile
+   mvn exec:java -Dexec.mainClass="com.alessandromelo.Main"
+   
+3. Modifique os **Users** na classe Main para testar os cenários de validação.
+
+## 📋 Exemplo de Saída no Console
+
+Ao tentar registrar um usuário com e-mail inválido, o sistema realiza o seguinte fluxo:
+
+```text
+[LOG] ValidatorEmail is running!
+[LOG] Validating email: mariafc52gmail.com
+[LOG - EXCEPTION]: Validation failed in ValidatorEmail - Reason: Invalid email format! 
