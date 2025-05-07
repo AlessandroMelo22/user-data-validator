@@ -12,6 +12,5 @@ public class ValidatorEmail implements Validator{
         if(!(user.getEmail().matches("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$"))){
             throw new IllegalArgumentException("Invalid email format");
         }
-
     }
 }

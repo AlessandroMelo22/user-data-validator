@@ -12,6 +12,5 @@ public class ValidatorName implements Validator{
         if(user.getName() == null || user.getName().trim().isEmpty()){
             throw new NullPointerException("Name cannot be null or empty");
         }
-
     }
 }

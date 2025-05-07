@@ -16,6 +16,5 @@ public class ValidatorPassword implements Validator{
         if(user.getPassword().length() < this.minimumSize){
             throw new IllegalArgumentException("Password must be at least " + this.minimumSize + " characters");
         }
-
     }
 }
