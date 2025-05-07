@@ -57,6 +57,7 @@ public class LogAspect {
 
     @AfterThrowing(pointcut = "execution(* com.alessandromelo.service.validator.*.*(..))", throwing = "exception")
     public void logAfterTrowing(JoinPoint joinPoint, Throwable exception){
-        System.out.println("[LOG - EXCEPTION]: " + "Validation failed in " + joinPoint.getTarget().getClass().getSimpleName() + " - Reason: " + exception.getMessage()  + "!");
+        System.out.println("[LOG - EXCEPTION]: " + "Validation failed in "
+                + joinPoint.getTarget().getClass().getSimpleName() + " - Reason: " + exception.getMessage()  + "!");
     }
 }
